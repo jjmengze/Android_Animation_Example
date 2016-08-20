@@ -3,6 +3,7 @@ package com.ameng.android_animation_example.model;
 import android.content.Context;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
 
 /**
  * Created by ameng on 8/19/16.
@@ -35,7 +36,24 @@ public class CustomAnimation {
         animationAlpha.setStartOffset(startOffset);
     }
 
-    public Animation getAlpha() {
+    public void setAnimationScale(float fromX, float toX, float fromY, float toY, int duration, int repeatCount, boolean fillAfter, int startOffset) {
+        if (animationScale != null) {
+            animationScale = null;
+        }
+        animationScale = new ScaleAnimation(fromX, toX, fromY, toY,
+                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+                0.5f);
+        animationScale.setDuration(duration);
+        animationScale.setRepeatCount(repeatCount);
+        animationScale.setFillAfter(fillAfter);
+        animationScale.setStartOffset(startOffset);
+    }
+
+    public Animation getAnimationAlpha() {
+        return animationAlpha;
+    }
+
+    public Animation getAnimationScale() {
         return animationAlpha;
     }
 }
