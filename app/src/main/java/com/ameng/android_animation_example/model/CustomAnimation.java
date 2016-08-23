@@ -25,6 +25,16 @@ public class CustomAnimation {
         this.context = context;
     }
 
+    /**
+     * 透明度動畫
+     *
+     * @param from        開始的透明度
+     * @param to          結束的透明度
+     * @param duration    動畫執行時間
+     * @param repeatCount 重覆動畫次數
+     * @param fillAfter   動畫執行完是否停留在執行的狀態
+     * @param startOffset 執行前的等待時間
+     */
     public void setAnimationAlpha(float from, float to, int duration, int repeatCount, boolean fillAfter, int startOffset) {
         if (animationAlpha != null) {
             animationAlpha = null;
@@ -36,6 +46,18 @@ public class CustomAnimation {
         animationAlpha.setStartOffset(startOffset);
     }
 
+    /**
+     * 大小縮放動畫
+     *
+     * @param fromX       開始 X的大小
+     * @param toX         結束 X的大小
+     * @param fromY       開始 Y的大小
+     * @param toY         結束 Y的大小
+     * @param duration    動畫執行時間
+     * @param repeatCount 重覆動畫次數
+     * @param fillAfter   動畫執行完是否停留在執行的狀態
+     * @param startOffset 執行前的等待時間
+     */
     public void setAnimationScale(float fromX, float toX, float fromY, float toY, int duration, int repeatCount, boolean fillAfter, int startOffset) {
         if (animationScale != null) {
             animationScale = null;
