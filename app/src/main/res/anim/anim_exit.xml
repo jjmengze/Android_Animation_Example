@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_interpolator">
+
+    <!--縮放動畫-->
+    <!--android:fromXScale 起始的 X 方向相對自身的縮放比例 1.0 代表無變化，0.5 代表起始時縮小一倍，2.0 代表放大一倍-->
+    <!--android:toXScale 結尾的 X 方向相對自身的縮放比例 1.0 代表無變化，0.5 代表起始時縮小一倍，2.0 代表放大一倍-->
+    <!--android:fromYScale 起始的 Y 方向相對自身的縮放比例 1.0 代表無變化，0.5 代表起始時縮小一倍，2.0 代表放大一倍-->
+    <!--android:toYScale 結尾的 Y 方向上相對自身的縮放比例 1.0 代表無變化，0.5 代表起始時縮小一倍，2.0 代表放大一倍-->
+    <!--android:duration 動畫持續時間，以毫秒為單位-->
+    <scale
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:pivotX="69.99999%"
+        android:pivotY="100.0%"
+        android:toXScale="0.0"
+        android:toYScale="0.0" />
+
+    <!--android:duration 動畫持續時間，以毫秒為單位-->
+    <!--android:fillAfter 如果設置為true，控件動畫結束時，將保持動畫最後時的狀態-->
+    <!--android:fillBefore 如果設置為true,控件動畫結束時，還原到開始動畫前的狀態-->
+    <!--android:fillEnabled 與android:fillBefore 效果相同，都是在動畫結束時，將控件還原到初始化狀態-->
+    <!--android:repeatCount 重複次數-->
+    <!--android:repeatMode 重複類型，有reverse 和restart 兩個值，reverse 表示倒序回放，restart 表示重新放一遍，必須與repeatCount 一起使用才能看到效果。因為這裡的意義是重複的類型，即回放時的動作。 -->
+    <!--android:interpolator 設定插值器，其實就是指定的動作效果，比如彈跳效果等...-->
+    <alpha
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" />
+</set>
