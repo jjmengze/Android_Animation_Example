@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{(view) -> viewModel.spinClick(view)}"
-            android:text="R + S + A" />
+            android:text="旋轉 + 縮放 + 透明" />
 
         <Button
             android:id="@+id/btn2"

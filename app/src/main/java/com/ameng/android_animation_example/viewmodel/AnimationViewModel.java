@@ -39,10 +39,10 @@ public class AnimationViewModel implements ViewModel {
         checkAnimationSet();
 
         customAnimation.setAnimationScale(0, 1, 0, 1, 1000, 0, true, 0);
-//        ca.setAnimationRotate(0f, 360f, 1000, 0, false, 0);
+        customAnimation.setAnimationRotate(0f, 360f, 1000, 0, false, 0);
         customAnimation.setAnimationAlpha(0, 1, 1000, 0, true, 0);
 
-//        animationSet.addAnimation(ca.getRotate());
+        animationSet.addAnimation(customAnimation.getAnimationRotate());
         animationSet.addAnimation(customAnimation.getAnimationScale());
         animationSet.addAnimation(customAnimation.getAnimationAlpha());
         animationSet.setInterpolator(new LinearInterpolator());

@@ -43,4 +43,5 @@ public class AnimationActivity extends AppCompatActivity implements DataListener
     public void onAnimationChanged(Animation animationSet) {
         binding.text.startAnimation(animationSet);
     }
+
 }
