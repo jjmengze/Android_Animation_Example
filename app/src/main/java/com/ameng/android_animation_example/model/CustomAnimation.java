@@ -3,6 +3,7 @@ package com.ameng.android_animation_example.model;
 import android.content.Context;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 
@@ -63,9 +64,7 @@ public class CustomAnimation {
         if (animationScale != null) {
             animationScale = null;
         }
-        animationScale = new ScaleAnimation(fromX, endX, fromY, endY,
-                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
-                0.5f);
+        animationScale = new ScaleAnimation(fromX, endX, fromY, endY, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         animationScale.setDuration(duration);
         animationScale.setRepeatCount(repeatCount);
         animationScale.setFillAfter(fillAfter);
@@ -96,15 +95,41 @@ public class CustomAnimation {
         animationTranslate.setStartOffset(startOffset);
     }
 
+    /**
+     * @param fromDegrees 開始的旋轉角度
+     * @param toDegrees   結束的旋轉角度
+     * @param duration    動畫執行時間
+     * @param repeatCount 重覆動畫次數
+     * @param fillAfter   動畫執行完是否停留在執行的狀態
+     * @param startOffset 執行前的等待時間
+     */
+    public void setAnimationRotate(float fromDegrees, float toDegrees,
+                                   int duration, int repeatCount, boolean fillAfter, int startOffset) {
+        if (animationRotate != null) {
+            animationRotate = null;
+        }
+        animationRotate = new RotateAnimation(fromDegrees, toDegrees, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        animationRotate.setDuration(duration);
+        animationRotate.setRepeatCount(repeatCount);
+        animationRotate.setFillAfter(fillAfter);
+        animationRotate.setStartOffset(startOffset);
+
+    }
+
     public Animation getAnimationAlpha() {
         return animationAlpha;
     }
 
-    public Animation getAnimationScale() {
-        return animationAlpha;
+
+    public Animation getAnimationRotate() {
+        return animationRotate;
     }
 
-    public Animation getTranslate() {
+    public Animation getAnimationScale() {
+        return animationScale;
+    }
+
+    public Animation getAnimationTranslate() {
         return animationTranslate;
     }
 }
